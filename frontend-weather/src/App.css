@@ -1,0 +1,74 @@
+.container{
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.app-container {
+  background: linear-gradient(135deg, #5aa0f7);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.weather-card {
+  width: 420px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);margin: 120px;
+}
+.weather-cardhistory{
+  width:75%;border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);margin: 30px 120px 60px;
+}
+.weather-icon {
+  width: 120px;
+}
+
+.forecast-card {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  color: white;
+}
+
+.forecast-icon {
+  width: 50px;
+}
+
+.minmax {
+  font-size: 1.1rem;
+  color: #dfe6e9;
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+button.btn {
+  border-radius: 0 10px 10px 0;
+}
+
+select.form-select {
+  border-radius: 10px 0 0 10px;
+  border: none;
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .weather-card, .weather-cardhistory {
+    width: 94%;
+    margin: 1rem;
+  }
+}

@@ -1,0 +1,37 @@
+Overview
+
+This project is a full-stack weather application that allows users to search for real-time weather information by any Indian city name, view the results instantly, and maintain a searchable weather history in MongoDB.
+It also includes a smart caching mechanism to reduce external API calls to OpenWeatherMap.  
+
+Created a Caching Mechanism in which When a user searches a city, the backend first checks the MongoDB database for existing weather data and If found than returns it directly from the database.
+And if not found than fetches fresh data from OpenWeatherMap through API, saves it in MongoDB, and sends it to the frontend.
+
+And created a delete Search History API that separatly allows to deleting old search history entries from the database.
+
+Fetches real-time weather data from OpenWeatherMap API.
+
+Uses Weather.js plugin in React for easy data handling.
+
+
+
+weather-app/
+│
+├── Frontend/                   # React frontend
+│   ├── src/
+│   │   ├── App.jsx
+│   │   ├── App.css
+│   │   └── index.js
+│   └── package.json
+│
+├── server/
+│   ├── apis/
+│   │    ├── weather/
+│   │   	├── weatherModel.js  
+│   ├── config/
+│   │   └── db.js             # MongoDB connection 
+│   └── index.js             # Express backend
+│
+├── .env
+├── package.json
+└── README.md
+
